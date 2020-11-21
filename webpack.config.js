@@ -11,7 +11,8 @@ module.exports = {
   },
   devtool: 'eval-source-map',  // new line
   devServer: {                 // new line
-    contentBase: './dist'      // new line
+    contentBase: './dist',      // new line
+    
   },
   plugins: [
     new CleanWebpackPlugin(),

@@ -6,12 +6,16 @@ import './css/styles.css';
 $(document).ready(function() {
   $("form#form").submit(function(event) {
     event.preventDefault();
-  fetch('https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD')
-    .then( response => {
-      return response.json();
-    })
-    .then(data => {
-      console.log(data);
-    });
+    let amount = $("#amount").val();
+    console.log(amount);
+    let currency = $("#currency").val();
+    console.log(currency);
+    fetch('https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD')
+      .then( response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+      });
   });
 });
