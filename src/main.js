@@ -20,6 +20,6 @@ $("form#form").submit(function(event) {
         throw Error(`API error: ${response.message}`);
       }
       console.log(response);
-      $('.output').text(response.conversion_rates.RSD);
+      $('.output').text(amount * response.conversion_rates[currency]);
     });
 });
