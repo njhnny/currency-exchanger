@@ -4,7 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import ExchangeService from './exchange.js';
 
-
+function printResponse(test) {
+  if (isNaN(test)) {
+    $('.output').text("please enter a valid currency code");
+  } else {
+    $('.output').text(test);
+  }
+}
 
 
 
@@ -20,6 +26,7 @@ $("form#form").submit(function(event) {
         throw Error(`API error: ${response.message}`);
       }
       console.log(response);
-      $('.output').text(amount * response.conversion_rates[currency]);
+      let conversion = amount * response.conversion_rates[currency];
+      printResponse(conversion);
     });
 });
