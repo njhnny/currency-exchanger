@@ -14,8 +14,12 @@ $("form#form").submit(function(event) {
   console.log(amount);
   let currency = $("#currency").val();
   console.log(currency);
-  const response = ExchangeService.getExchange();
-  console.log(response);
-  $('.output').text(response);
+  ExchangeService.getExchange()
+    .then(function(response) {
+      if (response instanceof Error) {
+        throw Error(`API error: ${response.message}`);
+      }
+      console.log(response);
+      $('.output').text(response.conversion_rates.RSD);
+    });
 });
-
