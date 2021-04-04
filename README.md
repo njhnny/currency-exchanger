@@ -1,7 +1,7 @@
-Last updated: 3/27/2021
+Last updated: 4/3/2021
 
 # Currency Exchanger
-Created: 11/13/2020 Updated 3/21/2021
+Created: 11/13/2020 Last updated: 4/3/2021
 ## by Nick Hennessy
 A tool that uses an API to convert currency values based on current exchange rates
 ## Technologies used
@@ -23,6 +23,9 @@ A tool that uses an API to convert currency values based on current exchange rat
 or
 
 * Navigate to the project's github page in your browser and download the code using the green button in the top right corner.
+
+* Create a .env file in the project's root directory and add API_KEY=< your api key here >
+You can obtain an API key at https://www.exchangerate-api.com/
 
 * Next, confirm that you're in the project's root directory. Install webpack with the command (npm install).
 
