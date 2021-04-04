@@ -9,6 +9,6 @@ export default class ExchangeService {
       })
       .catch(function(error) {
         return Error(error);
-      })
+      });
   }
 }
