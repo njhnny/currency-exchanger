@@ -6,7 +6,7 @@ import ExchangeService from './exchange.js';
 
 function printResponse(test) {
   if (isNaN(test)) {
-    $('.output').text("please enter a valid currency code");
+    $('.output').text("please enter an exchange currency");
   } else {
     $('.output').text(test);
   }

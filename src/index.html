@@ -11,8 +11,15 @@
         <label for="amount">Enter amount in US dollars:</label>
         <input id="amount" type="number">
         <br>
-        <label for="currency">Enter exchange currency (in ISO 4217 three letter currency code):</label>
-        <input id="currency">
+        <label for="currency">Choose your favorite Dinar:</label>
+        <select id="currency">
+          <option hidden disabled selected value> -- </option>
+          <option value="BHD">Bahraini Dinar</option>
+          <option value="DZD">Algerian Dinar</option>
+          <option value="KWD">Kuwaiti Dinar</option>
+          <option value="LYD">Libyan Dinar</option>
+          <option value="RSD">Serbian Dinar</option>
+        </select>
         <form id="form">
           <div class="form-group">
             
@@ -20,6 +27,7 @@
           <button type="submit" class="class="btn btn-primary>Convert</button>
         </form>
       </div>
+      <br>
       <div class="output">
         <p></p>
       </div> 
