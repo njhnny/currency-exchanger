@@ -19,9 +19,12 @@ $("form#form").submit(function(event) {
   ExchangeService.getExchange()
     .then(function(response) {
       if (response instanceof Error) {
-        throw Error(`API error: ${response.message}`);
+        throw Error(response.message);
       }
       let conversion = amount * response.conversion_rates[currency];
       printResponse(conversion);
+    })
+    .catch(function(error) {
+      $('.output').text("The exchange rate API returned an error: " + error.message);
     });
 });
